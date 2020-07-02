@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip bgm;
     public AudioClip seWarp;
 
+    public float countTime;
+
     AudioSource audiosource;
 
 
@@ -22,9 +24,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * 0.02f;
+        countTime += Time.deltaTime;
 
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        transform.position += transform.forward * 0.02f;
+        if(countTime>=10)
+        {
+            transform.position += transform.forward * 0.02f;
+        }
+        if (countTime >= 20)
+        {
+            transform.position += transform.forward * 0.02f;
+        }
+
+
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.position += transform.right* 2f;
             GetComponent<AudioSource>().PlayOneShot(seWarp);

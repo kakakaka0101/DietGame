@@ -20,6 +20,8 @@ public class ItemController : MonoBehaviour
 
     public Rigidbody rb;
 
+    float countTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,7 @@ public class ItemController : MonoBehaviour
 
             randomInt = Random.Range(-1,2);
 
-            randomT = new Vector3(randomInt*2, 1, Random.Range(-45f, 200f));
+            randomT = new Vector3(randomInt*2, 1, Random.Range(-45f, 100f));
 
             cloneItem = Instantiate(originItem[i], randomT, Quaternion.identity);
 
@@ -58,7 +60,15 @@ public class ItemController : MonoBehaviour
     {
         //transform.position -= transform.forward * 0.01f;
 
+        countTime += Time.deltaTime;
 
+
+        if (countTime >= 10f)
+        {
+            this.GetComponent<Rigidbody>().AddForce(0, 0, -1f * randomSpeed);
+
+           
+        }
 
 
     }

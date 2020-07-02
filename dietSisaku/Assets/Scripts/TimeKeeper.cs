@@ -23,7 +23,7 @@ public class TimeKeeper : MonoBehaviour
         Debug.Log("countTime" + countTime);
 
 
-        if(countTime >= 30f)
+        if(countTime >= 60f)
         {
             SceneManager.LoadScene("GameSet");
         }
