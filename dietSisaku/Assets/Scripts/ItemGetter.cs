@@ -21,7 +21,7 @@ public class ItemGetter : MonoBehaviour
         
     }
 
-    private object OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -33,7 +33,7 @@ public class ItemGetter : MonoBehaviour
             //Destroy(this.gameObject);
 
 
-            ScoreManager.MoredietScore;
+            ScoreManager.MoredietScore();
 
 
            
