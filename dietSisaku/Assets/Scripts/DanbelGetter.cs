@@ -35,7 +35,7 @@ public class DanbelGetter : MonoBehaviour
 
             //Destroy(this.gameObject);
 
-            ScoreManager.lessdietScore();
+            ScoreManager.LessdietScore();
 
 
             
