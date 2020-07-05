@@ -20,6 +20,6 @@ public class ScoreDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dietScore.text = "ダイエットスコア" + ScoreManager.getDietScore() + "kg";
+        dietScore.text = "ダイエットスコア" + ScoreManager.GetDietScore() + "kg";
     }
 }

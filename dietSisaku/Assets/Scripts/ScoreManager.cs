@@ -31,14 +31,14 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    public int moredietScore()
+    public int MoredietScore()
     {
         dietScore += 1;
 
         return dietScore;
     }
 
-    public int lessdietScore()
+    public int LessdietScore()
     {
         dietScore -= 1;
 
@@ -46,7 +46,7 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    public static int getDietScore()
+    public static int GetDietScore()
     {
         return dietScore;
     }
