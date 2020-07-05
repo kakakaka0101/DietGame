@@ -21,7 +21,7 @@ public class CakesGetter : MonoBehaviour
         
     }
 
-    private object OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -30,16 +30,13 @@ public class CakesGetter : MonoBehaviour
             this.GetComponent<MeshRenderer>().enabled = false;
             this.GetComponent<CapsuleCollider>().enabled = false;
 
-            //Destroy(this.gameObject);
 
-
-            ScoreManager.MoredietScore;
-
-
-
+            ScoreManager.MoredietScore();
+            
 
 
         }
+     
     }
 
 }
