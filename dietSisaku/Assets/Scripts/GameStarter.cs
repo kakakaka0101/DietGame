@@ -15,10 +15,18 @@ public class GameStarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
-        {
-            SceneManager.LoadScene("Game");
+        //if(Input.GetKey(KeyCode.Space))
+        //{
+            
 
-        }
+        //}
     }
+
+    public void Click()
+    {
+        //ログ出力
+        Debug.Log("押したよ！");
+        SceneManager.LoadScene("Game");
+    }
+
 }
