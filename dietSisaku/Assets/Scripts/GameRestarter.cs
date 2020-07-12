@@ -14,10 +14,13 @@ public class GameRestarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
-        {
-            SceneManager.LoadScene("GameStart");
+        
+    }
 
-        }
+    public void Click()
+    {
+        //ログ出力
+        Debug.Log("押したよ！");
+        SceneManager.LoadScene("GameStart");
     }
 }
