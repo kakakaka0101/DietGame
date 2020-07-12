@@ -14,7 +14,7 @@ public class ButtonChoice : MonoBehaviour
 
 {
 
-    Button button;
+    public Button button;
 
 
 
@@ -22,12 +22,17 @@ public class ButtonChoice : MonoBehaviour
 
     {
 
-        button = GameObject.Find("Canvas/ButtonSummary/StartButton").GetComponent<Button>();
+        //button = GameObject.Find("Canvas/ButtonSummary/ReStartButton").GetComponent<Button>();
 
         //ボタンが選択された状態になる
 
         button.Select();
 
+    }
+
+    void Update()
+    {
+        
     }
 
 }
