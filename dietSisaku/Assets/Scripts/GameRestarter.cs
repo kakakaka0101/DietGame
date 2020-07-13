@@ -21,6 +21,14 @@ public class GameRestarter : MonoBehaviour
     {
         //ログ出力
         Debug.Log("押したよ！");
+
+        Invoke("DelayMethod", 2f);
+        //SceneManager.LoadScene("GameStart");
+    }
+
+    void DelayMethod()
+    {
         SceneManager.LoadScene("GameStart");
     }
+
 }

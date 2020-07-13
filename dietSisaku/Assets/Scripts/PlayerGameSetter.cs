@@ -14,7 +14,7 @@ public class PlayerGameSetter : MonoBehaviour
     {
         pScale = ScoreManager.GetDietScore();
 
-        transform.localScale = new Vector3(pScale, 100, pScale);
+        transform.localScale = new Vector3(pScale, pScale, 100);
 
         Debug.Log("taijuu" + ScoreManager.GetDietScore());
     }
@@ -22,6 +22,6 @@ public class PlayerGameSetter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, 90, 0) * Time.deltaTime, Space.World);
+        //transform.Rotate(new Vector3(0, 90, 0) * Time.deltaTime, Space.World);
     }
 }
