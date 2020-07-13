@@ -27,9 +27,10 @@ public class CakesGetter : MonoBehaviour
         {
 
             GetComponent<AudioSource>().PlayOneShot(apple);
-            this.GetComponent<MeshRenderer>().enabled = false;
+            //this.GetComponent<MeshRenderer>().enabled = false;
+            this.transform.localScale = new Vector3(0f, 0f, 0f);
             this.GetComponent<CapsuleCollider>().enabled = false;
-
+            
 
             ScoreManager.MoredietScore();
             
