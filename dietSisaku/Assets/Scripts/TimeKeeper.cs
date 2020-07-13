@@ -7,6 +7,8 @@ public class TimeKeeper : MonoBehaviour
 {
 
     float countTime;
+
+    public float rimitTime = 60;
    
 
     // Start is called before the first frame update
@@ -20,10 +22,10 @@ public class TimeKeeper : MonoBehaviour
     {
         countTime += Time.deltaTime;
 
-        Debug.Log("countTime" + countTime);
+        //Debug.Log("countTime" + countTime);
 
 
-        if(countTime >= 60f)
+        if(countTime >= rimitTime)
         {
             SceneManager.LoadScene("GameSet");
         }

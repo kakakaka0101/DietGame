@@ -46,9 +46,9 @@ public class DanbelInstancer : MonoBehaviour
 
             this.transform.position = campos;
 
-            cloneDanbel = Instantiate(instansing, this.transform.position, Quaternion.Euler(0f,0f,-45f));
+            cloneDanbel = Instantiate(instansing, this.transform.position, Quaternion.identity);
 
-
+            //Debug.Log("カメラポジ＝" +campos);
 
 
             timeElapsed = 0.0f;
