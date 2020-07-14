@@ -7,12 +7,12 @@ public class TimeKeeper : MonoBehaviour
 {
 
     float countTime;
-   
+
 
     // Start is called before the first frame update
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class TimeKeeper : MonoBehaviour
         Debug.Log("countTime" + countTime);
 
 
-        if(countTime >= 60f)
+        if (countTime >= 60f)
         {
             SceneManager.LoadScene("GameSet");
         }

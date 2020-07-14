@@ -13,7 +13,7 @@ public class Stage : MonoBehaviour
     //ステージチップの配列
     public GameObject[] stageTips;
     //自動生成する時に使う変数start2TipIndex
-    public int start2TipIndex;
+    public int startTipIndex;
     //ステージ生成の先読み個数
     public int preInstantiate;
     //作ったステージチップの保持リスト
@@ -22,7 +22,7 @@ public class Stage : MonoBehaviour
     void start2()
     {
         //初期化処理
-        currentTipIndex = start2TipIndex - 1;
+        currentTipIndex = startTipIndex - 1;
         UpdateStage(preInstantiate);
     }
 
@@ -72,5 +72,17 @@ public class Stage : MonoBehaviour
         generatedStageList.RemoveAt(0);
         Destroy(oldStage);
     }
-
 }
+
+
+//ステージ削除が一番最初の奴にしか適応できてない
+
+/*//一番古いステージを削除します
+    void DestroyOldestStage()
+    {
+        GameObject gameObject1 = generatedStageList[0];
+        GameObject oldStage = gameObject1;
+        generatedStageList.RemoveAt(0);
+        Destroy(obj: oldStage);
+    }
+*/

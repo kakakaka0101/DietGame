@@ -3,7 +3,11 @@ guid: 657a7e3805e05254e90843ceb9e000c2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cam: {instanceID: 0}
+  - cloneCake: {instanceID: 0}
+  - originCake: {instanceID: 0}
+  - instansing: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
