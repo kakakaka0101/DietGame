@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameRestarter : MonoBehaviour
 {
+     public GameObject fade;
+
+    public AudioClip decision;
+    public AudioClip onSelect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +31,22 @@ public class GameRestarter : MonoBehaviour
     {
         //ログ出力
         Debug.Log("押したよ！");
+
+        this.GetComponent<AudioSource>().PlayOneShot(decision);
+
+        fade.GetComponent<FadeController>().isFadeOut = true;
+
+        Invoke("LoadS", 1f);
+    }
+
+    void LoadS()
+    {
         SceneManager.LoadScene("GameStart");
+    }
+
+    public void OnSelect()
+    {
+        this.GetComponent<AudioSource>().PlayOneShot(onSelect);
     }
 
 }

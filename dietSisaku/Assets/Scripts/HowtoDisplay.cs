@@ -6,6 +6,10 @@ public class HowtoDisplay : MonoBehaviour
 {
     public GameObject howtoImage;
 
+    public AudioClip decision;
+
+    public AudioClip onSelect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +26,14 @@ public class HowtoDisplay : MonoBehaviour
     {
         howtoImage.gameObject.SetActive(!howtoImage.gameObject.activeSelf);
 
-       
+        this.GetComponent<AudioSource>().PlayOneShot(decision);
 
 
+    }
+
+    public void OnSelect()
+    {
+        this.GetComponent<AudioSource>().PlayOneShot(onSelect);
     }
 
 }

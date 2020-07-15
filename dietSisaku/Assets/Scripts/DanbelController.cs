@@ -22,6 +22,9 @@ public class DanbelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //if(this.gameObject.transform.position.z <= -10)
+        //{
+        //    Destroy(this.gameObject);
+        //}
     }
 }
