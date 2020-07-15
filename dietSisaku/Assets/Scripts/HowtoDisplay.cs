@@ -28,7 +28,8 @@ public class HowtoDisplay : MonoBehaviour
 
         this.GetComponent<AudioSource>().PlayOneShot(decision);
 
-
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(ScoreManager.GetDietScore());
+        
     }
 
     public void OnSelect()
