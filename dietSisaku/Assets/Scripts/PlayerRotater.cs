@@ -9,6 +9,7 @@ public class PlayerRotater : MonoBehaviour
     public AudioClip rolefinish;
     public AudioClip trumpet;
     public AudioClip hirari;
+    public AudioClip drumrole;
 
     [SerializeField] private ParticleSystem particle;
 
@@ -16,6 +17,7 @@ public class PlayerRotater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<AudioSource>().PlayOneShot(drumrole);
         Invoke("Rolefinish",4f);
         Invoke("Trumpet", 5f);
         Invoke("Hirari", 6f);
@@ -27,7 +29,7 @@ public class PlayerRotater : MonoBehaviour
     {
         countTime += Time.deltaTime;
         
-        if (countTime > 6f)
+        if (countTime > 14f)
         {
            
             transform.Rotate(new Vector3(0, 90, 0) * Time.deltaTime, Space.World);

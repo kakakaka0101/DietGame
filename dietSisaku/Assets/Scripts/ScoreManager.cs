@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sc.text = "ダイエットスコア：" + dietScore + "kg";
+        sc.text = dietScore + "kg";
 
     }
 
